@@ -1,0 +1,23 @@
+
+ <div class="page">
+ <!-- Fixed navbar -->
+<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+  <a class="navbar-brand" href="#">Angular Notes</a>
+  <!-- <a class="navbar-brand" ><a routerLink="service"> Services</a></a> -->
+</nav>
+<div class="container-fluid text-center pb-5">
+  <div style="text-align:center">
+    <h3>
+      Welcome to {{title}}!
+    </h3>
+  </div>
+</div>
+<mat-tab-group>
+  <mat-tab label="Angular Basics"> <app-card></app-card> </mat-tab>
+  <mat-tab label="Services & HTTP"> <app-service-tab> </app-service-tab> </mat-tab>
+  <mat-tab label="Third"> Content 3 </mat-tab>
+</mat-tab-group>
+
+
+<router-outlet></router-outlet>
+</div>

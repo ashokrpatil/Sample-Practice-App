@@ -1,0 +1,34 @@
+<div>
+  <h4>How ng-if works!</h4>
+  <p *ngIf=true>Diplay myName *ngIf=true in this tag </p>
+  <p *ngIf=false>Will notDiplay myName *ngIf=False in this tag </p>
+  <p *ngIf="displayName">Diplay myName *ngIf='displayName' property in ts file is true </p>
+
+</div>
+
+<h4> How ngIf-else works!</h4>
+<div *ngIf="show; else notShow">
+    <p>
+      Show this only if "show" is true
+    </p>
+  </div>
+  
+  <ng-template #notShow>
+    <p>
+      Show this only if "show" is not true
+    </p>
+  </ng-template>
+
+<div>
+  <h4> This is for ngIf   then block and else block</h4>
+  <div *ngIf="elseProperty;then thenBlock; else elseBlock"></div>
+
+  <ng-template #thenBlock>
+      <h5 > if 'elseproperty'is true <b>then</b>
+         display My Name </h5>
+  </ng-template>
+  
+  <ng-template #elseBlock>
+     <b>else</b> this block
+  </ng-template>
+</div>

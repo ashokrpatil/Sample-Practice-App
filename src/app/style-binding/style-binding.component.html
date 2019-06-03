@@ -1,0 +1,10 @@
+<div>
+  <h4>
+   How style-binding works!
+  </h4>
+  <!-- here ts properties is used of classBinding Component because it is public -->
+  <p [style.color]="hasError ? 'red': 'green'">This is conditionl Style binding </p>
+  <p [style.color]="highlightColor">This is  also conditionl Style binding </p>
+  <p [ngStyle]="forMultiProp">This is ngStyle binding for multiple properties </p>
+
+</div>

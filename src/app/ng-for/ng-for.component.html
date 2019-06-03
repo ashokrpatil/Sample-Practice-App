@@ -1,0 +1,15 @@
+ 
+ <div> 
+   <h4>How ng-for works!</h4> 
+<p *ngFor="let color of colors"> {{color}}</p>
+</div>
+
+<h4>How ng-for works as index!</h4> 
+<div *ngFor="let color of colors; index as i"> 
+  <h5> {{i}} {{color}}</h5>
+</div>
+
+<h4>How ng-for works for first/last/odd/even element!</h4> 
+<div *ngFor="let color of colors; first as a"> 
+  <h5> {{a}} {{color}}</h5>
+</div>
