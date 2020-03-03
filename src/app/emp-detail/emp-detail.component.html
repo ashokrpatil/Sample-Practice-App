@@ -3,5 +3,34 @@
 <ul *ngFor="let employee of employees">
   <li>{{employee.id}}-{{employee.name}}-{{employee.age}}</li>
 </ul>
-<p>Total Employee:{{totalEmp}}</p>
+<p>Total Employee:{{employees.length}}</p>
+</div>
+
+<div>
+  <h3>Employee Details</h3>
+<ul *ngFor="let emp of newEmpDetails">
+  <li>Emploee Id:{{emp.id}}-Employee Name:<b>{{emp.employee_name}}</b>-Emploee age:{{emp.employee_age}}<b>Employee salary:{{emp.employee_salary}}</b></li>
+</ul>
+<p>Total Employee:{{newEmpDetails.length}}</p>
+</div>
+
+<select id="selectid" class="form-control-mb-12" (change)="modo($event.target.value)">
+  <option value="mod1">MODO 1</option>
+  <option value="mod2">MODO 2</option>
+  <option value="mod3">MODO 3</option>
+</select>
+{{msg}}
+
+<div>
+  <h3>Nested Array</h3>
+<p>Total Employee:{{routes.length}}</p>
+<ul *ngFor="let r of routes">
+<li>Emploee Id:{{r.id}}-Employee Name:{{r.address_name}}</li>
+</ul>
+<!-- <ul *ngFor="let r of routes">
+  <li>Emploee Id:{{r.id}}-Employee Name:{{r.address_name}}</li>
+</ul>
+<p>Total Employee:{{routes.length}}</p>
+{{adrs.id}}
+{{}} -->
 </div>

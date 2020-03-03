@@ -1,5 +1,35 @@
-<div><h3>Employee List</h3>
+<div><h3>{{msg}} List:{{employees.length}}</h3>
   <ul *ngFor="let employee of employees">
-    <li>{{employee.name}}</li>
+    <!-- <li>{{employee.name}}</li>  -->
+    <li>{{employee.vendor_code}}</li> 
+
   </ul>
   </div>
+
+  <select id="selectid" class="form-control-mb-12" (change)="modo($event.target.value)">
+    <option value="mod1">MODO 1</option>
+    <option value="mod2">MODO 2</option>
+    <option value="mod3">MODO 3</option>
+  </select>
+  {{msg}}
+
+  <div>
+    <select [(ngModel)]="selected" (ngModelChange)="onSelect(selected)">
+        <option *ngFor="let option of options" 
+                [value]="option"> 
+          {{ option }}
+        </option>
+   </select>
+</div>
+<p></p>
+<div>Selected Option</div>
+<div>{{ selected }}</div>
+
+<table>
+  <th>Value</th>
+  <th>id</th>
+  <tr *ngFor="let x of selectedData">
+    <td>{{x?.value}}</td>
+    <td>{{x?.id}}</td>
+  </tr>
+</table>

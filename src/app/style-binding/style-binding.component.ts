@@ -7,15 +7,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class StyleBindingComponent implements OnInit {
 
+
 public highlightColor="orange";
 public forMultiProp={
   color:"blue",
   fontStyle:"italic"
 }
 
+
   constructor() { }
 
   ngOnInit() {
   }
+
+
+  
 
 }

@@ -7,6 +7,7 @@ import { Interpolation } from '@angular/compiler';
   styleUrls: ['./interpolation.component.css']
 })
 export class InterpolationComponent implements OnInit {
+  
  name="Interpolation"
   constructor() { }
   greetUser(){

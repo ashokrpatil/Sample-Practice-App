@@ -27,6 +27,12 @@ import { EmpDetailComponent } from './emp-detail/emp-detail.component';
 import { EmpListComponent } from './emp-list/emp-list.component';
 import { EmployeeService } from "./employee.service";
 import { HttpClientModule } from '@angular/common/http';
+import { NewDataComponent } from './new-data/new-data.component';
+import { DebugTutoComponent } from './debug-tuto/debug-tuto.component';
+import { TodoComponent } from './proAngular6/todo/todo.component';
+import { ProAngular6Component } from './pro-angular6/pro-angular6.component';
+import { StockMarketComponent } from './pro-angular6/stock-market/stock-market.component';
+import { Chapter2ExercizeComponent } from './pro-angular6/chapter2-exercize/chapter2-exercize.component';
 
 @NgModule({
   declarations: [
@@ -48,6 +54,12 @@ import { HttpClientModule } from '@angular/common/http';
     ServiceTabComponent,
     EmpDetailComponent,
     EmpListComponent,
+    NewDataComponent,
+    DebugTutoComponent,
+    TodoComponent,
+    ProAngular6Component,
+    StockMarketComponent,
+    Chapter2ExercizeComponent,
   ],
   imports: [
     BrowserModule,

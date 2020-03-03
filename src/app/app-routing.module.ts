@@ -17,7 +17,10 @@ import { ParentComponent } from "./parent/parent.component";
 import { ServiceTabComponent } from "./service-tab/service-tab.component";
 import { EmpListComponent  } from "./emp-list/emp-list.component";
 import { EmpDetailComponent } from "./emp-detail/emp-detail.component";
-
+import {NewDataComponent} from "./new-data/new-data.component"
+import { TodoComponent } from './proAngular6/todo/todo.component';
+import { StockMarketComponent } from './pro-angular6/stock-market/stock-market.component';
+import { Chapter2ExercizeComponent } from './pro-angular6/chapter2-exercize/chapter2-exercize.component';
 const routes: Routes = [
   {
     path: 'interpolation',
@@ -49,7 +52,18 @@ const routes: Routes = [
     path: 'empList',
     component:  EmpListComponent },{
     path: 'empDetails',
-    component:  EmpDetailComponent},
+    component:  EmpDetailComponent},{
+      path: 'todo',
+      component:  TodoComponent},
+    {
+    path: 'newData',
+    component:  NewDataComponent},
+    {
+      path: 'stock-market',
+      component:  StockMarketComponent},
+      {
+        path: 'chapt2-exercize',
+        component:  Chapter2ExercizeComponent},
 ];
 
 @NgModule({
