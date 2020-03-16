@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Product } from '../model/product';
+import { Stock } from '../model/stock';
 
 @Component({
   selector: 'app-chapter2-exercize',
@@ -33,7 +34,7 @@ export class Chapter2ExercizeComponent implements OnInit {
   // }
   public product: Product;
   private quantities: Array<number>;
-
+  public stock: Stock;
   constructor() { }
 
   ngOnInit() {
@@ -48,6 +49,8 @@ export class Chapter2ExercizeComponent implements OnInit {
     for (let i = 0; i < 20; i++) {
       this.quantities.push(i);
     }
+    this.stock = new Stock('Test Stock Company', 'TSC', 85, 80,'');
+
   }
 
   incrementInCart() {
@@ -63,5 +66,8 @@ export class Chapter2ExercizeComponent implements OnInit {
   onQtyChange(qty) {
     console.log('Quantity change ', qty);
   }
-
+  toggleFavorite(event) {
+    console.log('We are toggling the favorite state for this stock', event);
+    this.stock.favorite = !this.stock.favorite;
+  }
 }

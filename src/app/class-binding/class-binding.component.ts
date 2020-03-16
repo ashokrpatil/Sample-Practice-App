@@ -21,7 +21,7 @@ public stock: Stock;
   constructor() { }
 
   ngOnInit() {
-    this.stock = new Stock('Test Stock Company', 'TSC', 85, 80);
+    this.stock = new Stock('Test Stock Company', 'TSC', 85, 80,'');
   }
 
   toggleFavorite(event) {

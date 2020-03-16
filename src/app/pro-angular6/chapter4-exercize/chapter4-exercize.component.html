@@ -1,0 +1,32 @@
+<h4>
+  {{title}}
+</h4>
+<h5>Component Change Detection </h5>
+
+<app-stock-item [stock]="stock" (toggleFavorite)="onToggleFavorite($event)"></app-stock-item>
+<button (click)="changeStockObject()">Change Stock</button>
+<button (click)="changeStockPrice()">Change Price</button>
+
+<h5>Component Input</h5>
+<app-stock-item [stock]="stockObj"></app-stock-item>
+
+<h5>Componenet lifecycle</h5>
+<app-stock-item [stock]="stock" (toggleFavorite)="onToggleFavoriteLC($event)"></app-stock-item>
+
+<h5>Component Output</h5>
+<app-stock-item [stock]="stock" (toggleFavorite)="onToggleFavoriteLC($event)"></app-stock-item>
+
+<h5>Componenet Projection</h5>
+<app-stock-item [stock]="stockObj">
+  <button (click)="testMethod()">With Button 1</button>
+</app-stock-item>
+
+<app-stock-item [stock]="stockObj">
+  No buttons for you!!
+</app-stock-item>
+
+<!-- <h5>Componenet Style</h5>
+<app-stock-item></app-stock-item> -->
+
+<h5>component-style-encapsulation</h5>
+<app-stock-item></app-stock-item>

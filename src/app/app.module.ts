@@ -29,10 +29,22 @@ import { EmployeeService } from "./employee.service";
 import { HttpClientModule } from '@angular/common/http';
 import { NewDataComponent } from './new-data/new-data.component';
 import { DebugTutoComponent } from './debug-tuto/debug-tuto.component';
-import { TodoComponent } from './proAngular6/todo/todo.component';
+// import { TodoComponent } from './proAngular6/todo/todo.component';
 import { ProAngular6Component } from './pro-angular6/pro-angular6.component';
 import { StockMarketComponent } from './pro-angular6/stock-market/stock-market.component';
 import { Chapter2ExercizeComponent } from './pro-angular6/chapter2-exercize/chapter2-exercize.component';
+import { Chapter3ExercizeComponent } from './pro-angular6/chapter3-exercize/chapter3-exercize.component';
+import { ProductItemComponent } from './pro-angular6/chapter3-exercize/product-item/product-item.component';
+import { Chapter4ExercizeComponent } from './pro-angular6/chapter4-exercize/chapter4-exercize.component';
+import { StockItemComponent } from './pro-angular6/chapter4-exercize/stock-item/stock-item.component';
+import { Chapter5ExercizeComponent } from './pro-angular6/chapter5-exercize/chapter5-exercize.component';
+import { Chapter6ExercizeComponent } from './pro-angular6/chapter6-exercize/chapter6-exercize.component';
+import { CreateStockComponent } from './pro-angular6/chapter6-exercize/create-stock/create-stock.component';
+import { Chapter7ExercizeComponent } from './pro-angular6/chapter7-exercize/chapter7-exercize.component';
+import { CreateStockCsv7Component } from './pro-angular6/chapter7-exercize/create-stock-csv7/create-stock-csv7.component';
+import { Chapter8ExercizeComponent } from './pro-angular6/chapter8-exercize/chapter8-exercize.component';
+import { CreateStockServiceComponent } from './pro-angular6/chapter8-exercize/create-stock-service/create-stock-service.component';
+import { StockListComponent } from './pro-angular6/chapter8-exercize/stock-list/stock-list.component';
 
 @NgModule({
   declarations: [
@@ -56,10 +68,22 @@ import { Chapter2ExercizeComponent } from './pro-angular6/chapter2-exercize/chap
     EmpListComponent,
     NewDataComponent,
     DebugTutoComponent,
-    TodoComponent,
+    // TodoComponent,
     ProAngular6Component,
     StockMarketComponent,
     Chapter2ExercizeComponent,
+    Chapter3ExercizeComponent,
+    ProductItemComponent,
+    Chapter4ExercizeComponent,
+    StockItemComponent,
+    Chapter5ExercizeComponent,
+    Chapter6ExercizeComponent,
+    CreateStockComponent,
+    Chapter7ExercizeComponent,
+    CreateStockCsv7Component,
+    Chapter8ExercizeComponent,
+    CreateStockServiceComponent,
+    StockListComponent,
   ],
   imports: [
     BrowserModule,

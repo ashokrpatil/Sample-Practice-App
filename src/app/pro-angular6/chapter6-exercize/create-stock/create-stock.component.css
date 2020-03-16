@@ -1,0 +1,14 @@
+.stock-name .ng-valid,
+.stock-code .ng-pristine,
+.stock-price .ng-untouched {
+  background-color: rgb(188, 241, 188);
+}
+
+.stock-name .ng-invalid,
+.stock-code .ng-dirty,
+.stock-price .ng-touched {
+  background-color: pink;
+}
+
+
+

@@ -1,0 +1,235 @@
+<h4><b>Create Stock Form</b></h4>
+
+<div class="form-group">
+  <form (ngSubmit)="createStock()">
+    <div>
+      The following element changes from green to red when it is invalid
+    </div>
+    <div class="stock-name">
+      <input type="text"
+             placeholder="Stock Name"
+             required
+             name="stockName"
+             [(ngModel)]="stock.name">
+    </div>
+    <div>
+      The following element changes from green to red when it has been modified
+    </div>
+    <div class="stock-code">
+      <input type="text"
+             placeholder="Stock Code"
+             name="stockCode"
+             [(ngModel)]="stock.code">
+    </div>
+    <div>
+        The following element changes from green to red when it is visited by the user, regardless of change
+      </div>
+    <div class="stock-price">
+      <input type="number"
+             placeholder="Stock Price"
+             name="stockPrice"
+             [ngModel]="stock.price"
+             (ngModelChange)="setStockPrice($event)">
+    </div>
+    <div class="stock-exchange">
+      <div>
+        <select name="stockExchange" [(ngModel)]="stock.exchange">
+          <option *ngFor="let exchange of exchanges" [ngValue]="exchange">{{exchange}}</option>
+        </select>
+      </div>
+    </div>
+    <div class="stock-confirm">
+      <input type="checkbox"
+             name="stockConfirm"
+             [(ngModel)]="confirmed">
+      I confirm that the information provided above is accurate!
+    </div>
+    <button [disabled]="!confirmed"
+            type="submit">Create</button>
+  </form>
+</div>
+
+<h5>Stock Name is {{stock | json}}</h5>
+<h5>Data has been confirmed: {{confirmed}}</h5>
+
+
+<h4><b>Create Stock Form with Controlled validity</b></h4>
+
+<div class="form-group">
+  <form (ngSubmit)="createStockCV(stockForm)" #stockForm="ngForm">
+    <div class="stock-name">
+      <input type="text"
+             placeholder="Stock Name"
+             required
+             name="stockName"
+             #stockName="ngModel"
+             [(ngModel)]="stock.name">
+    </div>
+    <div *ngIf="stockName.errors && stockName.errors.required">Stock Name is Mandatory</div>
+    <div class="stock-code">
+      <input type="text"
+             placeholder="Stock Code"
+             required
+             minlength="2"
+             name="stockCode"
+             #stockCode="ngModel"
+             [(ngModel)]="stock.code">
+    </div>
+    <div *ngIf="stockCode.dirty && stockCode.invalid">
+      <div *ngIf="stockCode.errors.required">Stock Code is Mandatory</div>
+      <div *ngIf="stockCode.errors.minlength">Stock Code must be atleast of length 2</div>
+    </div>
+    <div class="stock-price">
+      <input type="number"
+             placeholder="Stock Price"
+             name="stockPrice"
+             required
+             #stockPrice="ngModel"
+             [ngModel]="stock.price"
+             (ngModelChange)="setStockPrice($event)">
+    </div>
+    <div *ngIf="stockPrice.dirty && stockPrice.invalid">
+      <div *ngIf="stockPrice.errors.required">Stock Price is Mandatory</div>
+    </div>
+    <div class="stock-exchange">
+      <div>
+        <select name="stockExchange" [(ngModel)]="stock.exchange">
+          <option *ngFor="let exchange of exchanges" [ngValue]="exchange">{{exchange}}</option>
+        </select>
+      </div>
+    </div>
+    <div class="stock-confirm">
+      <input type="checkbox"
+             name="stockConfirm"
+             required
+             [(ngModel)]="confirmed">
+      I confirm that the information provided above is accurate!
+    </div>
+    <button type="submit">Create</button>
+  </form>
+</div>
+
+<h5>Stock Name is {{stock | json}}</h5>
+<h5>Data has been confirmed: {{confirmed}}</h5>
+
+
+<h4><b>Create Stock Form with form groups</b></h4>
+
+<div class="form-group">
+  <form (ngSubmit)="createStockFG(stockForm)" #stockForm="ngForm" >
+    <div ngModelGroup="stock">
+      <div class="stock-name">
+        <input type="text"
+              placeholder="Stock Name"
+              required
+              name="name"
+              ngModel>
+      </div>
+      <div class="stock-code">
+        <input type="text"
+              placeholder="Stock Code"
+              required
+              minlength="2"
+              name="code"
+              ngModel>
+      </div>
+      <div class="stock-price">
+        <input type="number"
+              placeholder="Stock Price"
+              name="price"
+              required
+              ngModel>
+      </div>
+      <div class="stock-exchange">
+        <div>
+          <select name="exchange" ngModel>
+            <option *ngFor="let exchange of exchanges" [ngValue]="exchange">{{exchange}}</option>
+          </select>
+        </div>
+      </div>
+    </div>
+    <button type="submit">Create</button>
+  </form>
+</div>
+
+<h5>Stock Name is {{stock | json}}</h5>
+<h5>Data has been confirmed: {{confirmed}}</h5>
+
+<h4><b>Create Stock Form with Full form</b></h4>
+
+<div class="form-group">
+  <form (ngSubmit)="createStock()">
+    <div class="stock-name">
+      <input type="text"
+             placeholder="Stock Name"
+             name="stockName"
+             [(ngModel)]="stock.name">
+    </div>
+    <div class="stock-code">
+      <input type="text"
+             placeholder="Stock Code"
+             name="stockCode"
+             [(ngModel)]="stock.code">
+    </div>
+    <div class="stock-price">
+      <input type="number"
+             placeholder="Stock Price"
+             name="stockPrice"
+             [ngModel]="stock.price"
+             (ngModelChange)="setStockPrice($event)">
+    </div>
+    <div class="stock-exchange">
+      <div>
+        <select name="stockExchange" [(ngModel)]="stock.exchange">
+          <option *ngFor="let exchange of exchanges" [ngValue]="exchange">{{exchange}}</option>
+        </select>
+      </div>
+    </div>
+    <div class="stock-confirm">
+      <input type="checkbox"
+             name="stockConfirm"
+             [(ngModel)]="confirmed">
+      I confirm that the information provided above is accurate!
+    </div>
+    <button [disabled]="!confirmed"
+            type="submit">Create</button>
+  </form>
+</div>
+
+<h5>Stock Name is {{stock | json}}</h5>
+<h5>Data has been confirmed: {{confirmed}}</h5>
+
+
+<h4><b>Create Stock Form :ng model alternative</b></h4>
+
+<div class="form-group">
+  <form>
+    <div class="stock-name">
+      <input type="text"
+             placeholder="Stock Name"
+             [value]="stock.name"
+             (input)="stock.name=$event.target.value">
+    </div>
+  </form>
+  <button (click)="stock.name='test'">Reset stock name</button>
+</div>
+
+<h5>Stock Name is {{stock.name}}</h5>
+
+<h4><b>Create Stock Form :Simple ng model </b></h4>
+
+<div class="form-group">
+  <form>
+    <div class="stock-name">
+      <input type="text"
+             placeholder="Stock Name"
+             name="stockName"
+             [(ngModel)]="stock.name">
+    </div>
+  </form>
+  <button (click)="stock.name='test'">Reset stock name</button>
+</div>
+
+<h5>Stock Name is {{stock.name}}</h5>
+
+

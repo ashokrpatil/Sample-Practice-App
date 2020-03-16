@@ -1,3 +1,4 @@
+<h5> Chapter-2 Exercize</h5>
 <div class="product-item" [class]="product.isOnSale ? 'product-item sale' : ''">
   <div class="image"><img [src]="product.imageUrl"></div>
   <div class="details">
@@ -26,4 +27,14 @@
       <button (click)="incrementInCart()">+</button>
     </div>
   </div>
+</div>
+
+<h5> Chapter-2</h5>
+
+<div class="stock-container">
+  <div class="name">{{stock.name + ' (' + stock.code + ')'}}</div>
+  <div class="price"
+      [class]="stock.isPositiveChange() ? 'positive' : 'negative'">$ {{stock.price}}</div>
+  <button (click)="toggleFavorite($event)"
+          [disabled]="stock.favorite">Add to Favorite</button>
 </div>
